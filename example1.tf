@@ -40,19 +40,3 @@ module "order_history" {
         non_key_attributes = []
     }]
 }
-
-
-# Example of table item. Remember the table is schemaless, you can add other attributes.
-resource "aws_dynamodb_table_item" "order_history" {
-  table_name = "${module.order_history.table_id}"
-  hash_key = "${module.order_history.table_hash_key}"
-  item = <<ITEM
-{
-  "customerId": {"S": "Julian"},
-  "date": {"S": "Today"},
-  "city": {"S": "Amsterdam"},
-  "zipCode": {"N": "1234"},
-  "price" : {"N": "10"}
-}
-ITEM
-}
