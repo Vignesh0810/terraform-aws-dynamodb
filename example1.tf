@@ -49,7 +49,7 @@ resource "aws_dynamodb_table_item" "order_history" {
   item = <<ITEM
 {
   "customerId": {"S": "Julian"},
-  "date": {"N": "Today"},
+  "date": {"S": "Today"},
   "city": {"S": "Amsterdam"},
   "zipCode": {"N": "1234"},
   "price" : {"N": "10"}
