@@ -13,9 +13,9 @@ Maximum autoscaling capacity and threshold default configuration can be overwrit
 
 ## Examples
 
-A. Table with hash/sort key, global and local secondary index
-B. Table with only a hash key
-C. Table with hash and sort key
+*A Table with hash/sort key, global and local secondary index
+*B Table with only a hash key
+*C Table with hash and sort key
 
 ## Features
 * Autoscaling
