@@ -5,7 +5,7 @@ resource "aws_appautoscaling_target" "read" {
   resource_id        = "table/${var.name}"
   scalable_dimension = "dynamodb:table:ReadCapacityUnits"
   service_namespace  = "dynamodb"
-  depends_on = ["aws_dynamodb_table.table"]
+  depends_on         = ["aws_dynamodb_table.table"]
 }
 
 resource "aws_appautoscaling_policy" "read" {
@@ -22,6 +22,7 @@ resource "aws_appautoscaling_policy" "read" {
 
     target_value = "${var.threshold}"
   }
+
   depends_on = ["aws_dynamodb_table.table"]
 }
 
@@ -32,8 +33,9 @@ resource "aws_appautoscaling_target" "write" {
   resource_id        = "table/${var.name}"
   scalable_dimension = "dynamodb:table:WriteCapacityUnits"
   service_namespace  = "dynamodb"
-  depends_on = ["aws_dynamodb_table.table"]
+  depends_on         = ["aws_dynamodb_table.table"]
 }
+
 resource "aws_appautoscaling_policy" "write" {
   name               = "DynamoDBWriteCapacityUtilization:${aws_appautoscaling_target.write.resource_id}"
   policy_type        = "TargetTrackingScaling"
@@ -48,5 +50,6 @@ resource "aws_appautoscaling_policy" "write" {
 
     target_value = "${var.threshold}"
   }
+
   depends_on = ["aws_dynamodb_table.table"]
 }

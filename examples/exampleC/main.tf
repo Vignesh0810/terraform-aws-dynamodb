@@ -1,21 +1,22 @@
 module "tickets" {
-    source = "../../"
+  source = "../../"
 
-    name = "tickets"
+  name = "tickets"
 
-    attributes = [{
-        name = "ticketId"
-        type = "S"
-    },
+  attributes = [{
+    name = "ticketId"
+    type = "S"
+  },
     {
-        name = "timestamp"
-        type = "S"
-    }]
+      name = "timestamp"
+      type = "S"
+    },
+  ]
 
-    hash_key  = "ticketId"
-    range_key  = "timestamp"
+  hash_key  = "ticketId"
+  range_key = "timestamp"
 }
 
 provider "aws" {
-    region = "eu-west-1"
+  region = "eu-west-1"
 }

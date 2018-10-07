@@ -10,10 +10,10 @@ resource "aws_dynamodb_table" "table" {
   hash_key  = "${var.hash_key}"
   range_key = "${var.range_key}"
 
-
   point_in_time_recovery {
-    enabled =  true
+    enabled = true
   }
+
   server_side_encryption {
     enabled = true
   }
@@ -24,7 +24,7 @@ resource "aws_dynamodb_table" "table" {
   # GSL - Global secondary index
   global_secondary_index = "${var.global_secondary_indexes}"
 
-  ttl = "${var.ttl}"
-  stream_enabled = "${var.stream_enabled}"
+  ttl              = "${var.ttl}"
+  stream_enabled   = "${var.stream_enabled}"
   stream_view_type = "${var.stream_view_type}"
 }

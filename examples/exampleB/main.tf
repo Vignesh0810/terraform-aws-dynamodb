@@ -1,16 +1,16 @@
 module "students" {
-    source = "../../"
+  source = "../../"
 
-    name = "students"
+  name = "students"
 
-    attributes = [{
-        name = "studentId"
-        type = "S"
-    }]
+  attributes = [{
+    name = "studentId"
+    type = "S"
+  }]
 
-    hash_key  = "studentId"
+  hash_key = "studentId"
 }
 
 provider "aws" {
-    region = "eu-west-1"
+  region = "eu-west-1"
 }
