@@ -13,5 +13,5 @@ module "tickets" {
     }]
 
     hash_key  = "ticketId"
-    sort_key  = "timestamp"
+    range_key  = "timestamp"
 }

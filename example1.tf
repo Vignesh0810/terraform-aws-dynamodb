@@ -31,8 +31,8 @@ module "order_history" {
     }]
 
     global_secondary_indexes = [{
-        name               = "zip_code-index"
-        hash_key           = "zip_code"
+        name               = "zipCode-index"
+        hash_key           = "zipCode"
         range_key          = "date"
         read_capacity      = "5"
         write_capacity     = "5"
