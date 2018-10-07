@@ -8,14 +8,14 @@ https://www.terraform.io/docs/providers/aws/ and https://www.terraform.io/docs/b
 ```
 IMPORTANT! 
 You can define a maximum of 5 local secondary indexes and 5 global secondary indexes per table.
-Maximum autoscaling capacity and threshold default configuration can be overwritten from module or dynamodb/variables.tf
+Maximum autoscaling capacity and threshold default configuration can be overwritten from module or variables.tf
 ```
 
 ## Examples
 
-1. Table with hash/sort key, global and local secondary index
-2. Table with only a hash key
-3. Table with hash and sort key
+A. Table with hash/sort key, global and local secondary index
+B. Table with only a hash key
+C. Table with hash and sort key
 
 ## Features
 * Autoscaling

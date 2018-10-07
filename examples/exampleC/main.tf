@@ -1,5 +1,5 @@
 module "tickets" {
-    source = "dynamodb"
+    source = "../../"
 
     name = "tickets"
 
@@ -14,4 +14,8 @@ module "tickets" {
 
     hash_key  = "ticketId"
     range_key  = "timestamp"
+}
+
+provider "aws" {
+    region = "eu-west-1"
 }

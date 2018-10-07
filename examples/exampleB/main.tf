@@ -1,5 +1,5 @@
 module "students" {
-    source = "dynamodb"
+    source = "../../"
 
     name = "students"
 
@@ -9,4 +9,8 @@ module "students" {
     }]
 
     hash_key  = "studentId"
+}
+
+provider "aws" {
+    region = "eu-west-1"
 }

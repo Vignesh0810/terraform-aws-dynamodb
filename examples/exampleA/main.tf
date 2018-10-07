@@ -1,7 +1,6 @@
 ## Read recomendation https://aws.amazon.com/blogs/aws/now-available-global-secondary-indexes-for-amazon-dynamodb/
-
 module "order_history" {
-    source = "dynamodb"
+    source = "../../"
 
     name = "order-history"
 
@@ -39,4 +38,8 @@ module "order_history" {
         projection_type    = "ALL" # ALL, INCLUDE or KEYS_ONLY
         non_key_attributes = []
     }]
+}
+
+provider "aws" {
+    region = "eu-west-1"
 }
